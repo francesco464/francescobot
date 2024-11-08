@@ -20,7 +20,7 @@ import { generateWAMessageFromContent } from '@whiskeysockets/baileys'
  let isMedia = /image|video|sticker|audio/.test(mime) 
  let more = String.fromCharCode(8206) 
  let masss = more.repeat(850) 
- let htextos = `${text ? text : ".hidetag"}` 
+ let htextos = `${text ? text : ".all"}` 
  if ((isMedia && quoted.mtype === 'imageMessage') && htextos) { 
  var mediax = await quoted.download?.() 
  conn.sendMessage(m.chat, { image: mediax, mentions: users, caption: htextos, mentions: users }, { quoted: m }) 
